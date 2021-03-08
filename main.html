@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<div>
+<div class="container">
 <header>
     <nav>
         <div class="logo">
@@ -35,6 +35,35 @@
     </nav>
 </header>
 
+<section class="banner">
+<div class="image"><img src="images/boho.jpg">
+<p class="first">Get inspired, Shop products</p>
+<p class="second">find professionals!</p>
+</div>
+
+<div class="containerForInput"> 
+    <!-- <div class="text"><input type="text" id="search" name="search" placeholder="Search photos, products, pros & more.."></div>
+     <div><input type="submit" value="Search"></div> -->
+
+<form class="form">
+  <div class="form-group">
+    <input type="text" placeholder="Search photos, prducts, pros & more..." />
+  </div>
+  <button class="btn btn-primary">Submit</button>
+</form>
+</div> 
+
+<!-- <form class="form">
+  <div class="form-group">
+    <input type="text" placeholder="Name" />
+    <div class="line"></div>
+  </div>
+  <button class="btn btn-primary">Submit</button>
+</form> -->
+
+</section>
+
+
 </div>
 
 <script>
@@ -43,13 +72,12 @@ const navLinks = document.querySelector(".nav-links");
 const links = document.querySelectorAll(".nav-links li");
 
 hamburger.addEventListener('click', ()=>{
-   //Animate Links
+
     navLinks.classList.toggle("open");
     links.forEach(link => {
         link.classList.toggle("fade");
     });
 
-    //Hamburger Animation
     hamburger.classList.toggle("toggle");
 });
 

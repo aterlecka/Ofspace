@@ -5,7 +5,7 @@
   box-sizing: border-box;
   font-family: sans-serif;
   letter-spacing: 1px;
-  font-weight: 300;
+  /* font-weight: 300; */
 }
 body{
   overflow-x: hidden;
@@ -13,14 +13,17 @@ body{
 nav{
   height: 6rem;
   width: 100vw;
-  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2); */
   display: flex;
-  position: fixed;
+  /* position: fixed; */
   z-index: 10;
 }
 
 .logo{
-  padding:2vh 3vw;
+/* padding:3vh 9vw; */
+  /* padding: 7vh 10vh; */
+  margin-left: 10%;
+  margin-top:1.5%;
   text-align: center;
   font-size: 40px;
   font-weight: bold;
@@ -31,7 +34,8 @@ nav{
   display: flex;
   list-style: none; 
   width: 70vw;
-  margin-left: 8%;
+  margin-left: 3%;
+  /* margin-left: -6%; */
   padding: 0 0.7vw;
   justify-content: space-evenly;
   align-items: center;
@@ -57,7 +61,7 @@ nav{
   background-color: transparent;
   border: 1.5px solid #000000;
   padding: 0.6rem 1.8rem;
-  margin-left: 19vw;
+  margin-left: 1vw;
   font-size: 1rem;
   cursor: pointer;
 
@@ -81,24 +85,164 @@ nav{
   display: none;
 }
 
+
+/*Animating Hamburger Icon on Click*/
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+  transition: all 0.7s ease;
+  width:0;
+}
+.toggle .line3{
+  transform: rotate(45deg) translate(-5px,-6px);
+}
+ 
+.banner img{
+  /* position: relative; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 90%;
+  opacity: 85%;
+  position: relative;
+}
+
+.banner p{
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  font-size: 50px;
+  letter-spacing: 3px;
+}
+.banner .first{
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+.banner .second{
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.banner .containerForInput{ 
+  height: 12%;
+  width: 38%; 
+  /* background-color: #f7f2f6; */
+  position: absolute;
+  top: 55%;
+  left: 35%;
+  opacity: 90%;
+  display: flex;
+}
+.banner .text{
+  background: transparent;
+  border: none;
+  position: relative;
+  /* display: block; */
+  /* outline: none;
+  width: 400px;
+  height: 30px; */
+  /* top: 50px; */
+  /* margin: 0 auto;
+  padding: 10px; */
+
+
+}
+.form {
+background-color:#fff;
+  color: #222;
+  padding: 1rem 1rem 1.5rem;
+  max-width: 500px;
+  width: 80%;
+  box-shadow: 0 0 350px rgba(0, 0, 0, 0.25);
+  display: flex;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form .form-group {
+  margin: 7px 0;
+  position: relative;
+}
+
+/* .form .form-group .line {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: royalblue;
+  height: 2px;
+  transition: transform 200ms ease;
+  transform: scaleX(0);
+  transform-origin: left;
+} */
+
+.form .form-group input:focus + .line {
+  transform: scaleX(1);
+}
+
+.form input {
+  width: 170%;
+  padding: 0.5rem;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+}
+
+.form input::placeholder {
+  color: #ccc;
+}
+
+.btn {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 0.7rem 1rem;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  transition: background-color 300ms ease, transform 200ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn.btn-primary {
+  margin-left: 40%;
+  background-color: rgb(42, 42, 221);
+  color: #fff;
+}
+
+.btn.btn-primary:hover {
+  background-color: royalblue;
+}
+
+
 /*Stying for small screens*/
 @media screen and (max-width: 800px){
   nav{
-      position: fixed;
+      /* position: fixed; */
       z-index: 3;
   }
   .hamburger{
       display:block;
       position: absolute;
       cursor: pointer;
-      right: 5%;
-      top: 50%;
+      right: 9%;
+      top: 7%;
       transform: translate(-5%, -50%);
       z-index: 2;
       transition: all 0.7s ease;
   }
   .nav-links{
-      position: fixed;
+      /* position: fixed; */
       background:#cacaca;
       height: 100vh;
       width: 100%;
@@ -151,17 +295,14 @@ nav{
   cursor: pointer;
 
 }
+.banner .first { 
+  display: none;
+}
+.banner .second{
+  display: none;
+}
+.form{
+  display: none;
+}
 
 }
-/*Animating Hamburger Icon on Click*/
-.toggle .line1{
-  transform: rotate(-45deg) translate(-5px,6px);
-}
-.toggle .line2{
-  transition: all 0.7s ease;
-  width:0;
-}
-.toggle .line3{
-  transform: rotate(45deg) translate(-5px,-6px);
-}
- 
